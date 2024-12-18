@@ -1,0 +1,27 @@
+[project]
+name = "calculadora_actitividad_grupal_pis"
+version = "1.0.0"
+description = "Una calculadora CLI interactiva escrita en Python"
+authors = [
+    { name = "Grupo 11" }
+]
+readme = "README.md"
+requires-python = ">=3.10"
+
+
+[project.scripts]
+calculadora = "src.main:main"
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.black]
+line-length = 88
+
+[tool.isort]
+profile = "black"
+
