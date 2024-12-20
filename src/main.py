@@ -1,5 +1,5 @@
 # src/main.py
-from _calculadora import Calculadora
+from calculadora import Calculadora
 
 # Códigos ANSI para colores
 RESET = "\033[0m"
