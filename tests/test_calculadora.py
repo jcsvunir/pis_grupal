@@ -12,6 +12,7 @@ class TestCalculadora(unittest.TestCase):
         print('vamos con sumar')
         self.assertEqual(self.calc.sumar(3, 5), 8)
         self.assertEqual(self.calc.sumar(-3, 5), 2)
+        self.assertEqual(self.calc.sumar(-3, -5), -8)
         with self.assertRaises(TypeError):
             self.calc.sumar("a", 5)
 
