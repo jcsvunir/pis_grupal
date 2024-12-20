@@ -1,3 +1,3 @@
 # src/__init__.py
-from .calculadora import Calculadora
+from ._calculadora import Calculadora
 

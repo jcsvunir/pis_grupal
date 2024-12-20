@@ -1,5 +1,5 @@
 import unittest
-from src.calculadora import Calculadora
+from src._calculadora import Calculadora
 
 class TestCalculadora(unittest.TestCase):
     def setUp(self):
@@ -31,6 +31,7 @@ class TestCalculadora(unittest.TestCase):
         self.assertEqual(self.calc.dividir(0, -10), 0)
         with self.assertRaises(ZeroDivisionError):
             self.calc.dividir(10, 0)
+
 
     def test_validar_entrada(self):
         with self.assertRaises(TypeError):
