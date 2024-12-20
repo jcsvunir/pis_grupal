@@ -44,7 +44,7 @@ def main():
             print(f"{CYAN}Saliendo... ¡Hasta pronto!{RESET}")
             break
 
-        if opcion in ['1', '2', '3', '4']:
+        elif opcion in ['1', '2', '3', '4']:
             num1, num2 = solicitar_numeros()
 
             try:
