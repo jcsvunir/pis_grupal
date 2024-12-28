@@ -1,7 +1,5 @@
 # src/main.py
-import unittest
 from calculadora import Calculadora
-# from tests import TestCalculadora
 
 # Códigos ANSI para colores
 RESET = "\033[0m"
