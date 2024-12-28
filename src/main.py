@@ -1,5 +1,7 @@
 # src/main.py
+import unittest
 from calculadora import Calculadora
+# from tests import TestCalculadora
 
 # Códigos ANSI para colores
 RESET = "\033[0m"
@@ -11,6 +13,16 @@ RED = "\033[31m"
 CYAN = "\033[36m"
 BOLD = "\033[1m"
 
+def ejecutar_pruebas():
+    """Ejecuta las pruebas unitarias antes de iniciar la aplicación."""
+    print(f"{BOLD}{CYAN}Ejecutando pruebas unitarias...{RESET}")
+    suite = unittest.TestLoader().loadTestsFromTestCase(TestCalculadora)
+    result = unittest.TextTestRunner(verbosity=2).run(suite)
+    if result.wasSuccessful():
+        print(f"{GREEN}Todas las pruebas pasaron exitosamente.{RESET}")
+    else:
+        print(f"{RED}Algunas pruebas fallaron. Revise los resultados.{RESET}")
+        exit(1)  # Salir si las pruebas fallan
 
 def mostrar_menu():
     """Función para mostrar el menú interactivo."""
@@ -19,7 +31,7 @@ def mostrar_menu():
     print("2. Restar")
     print("3. Multiplicar")
     print("4. Dividir")
-    print("S. Salir")
+    print("X. Salir")
     print("--------------------------")
 
 def solicitar_numeros():
@@ -40,7 +52,7 @@ def main():
         mostrar_menu()
         opcion = input("Seleccione una opción: ").strip().lower()
 
-        if opcion == 's':
+        if opcion == 'x':
             print(f"{CYAN}Saliendo... ¡Hasta pronto!{RESET}")
             break
 
@@ -66,4 +78,6 @@ def main():
             print(f"{RED}Opción no válida. Inténtelo de nuevo.{RESET}")
 
 if __name__ == "__main__":
+    # 1ejecutar_pruebas()
     main()
+    
