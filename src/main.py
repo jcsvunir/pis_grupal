@@ -13,17 +13,6 @@ RED = "\033[31m"
 CYAN = "\033[36m"
 BOLD = "\033[1m"
 
-def ejecutar_pruebas():
-    """Ejecuta las pruebas unitarias antes de iniciar la aplicación."""
-    print(f"{BOLD}{CYAN}Ejecutando pruebas unitarias...{RESET}")
-    suite = unittest.TestLoader().loadTestsFromTestCase(TestCalculadora)
-    result = unittest.TextTestRunner(verbosity=2).run(suite)
-    if result.wasSuccessful():
-        print(f"{GREEN}Todas las pruebas pasaron exitosamente.{RESET}")
-    else:
-        print(f"{RED}Algunas pruebas fallaron. Revise los resultados.{RESET}")
-        exit(1)  # Salir si las pruebas fallan
-
 def mostrar_menu():
     """Función para mostrar el menú interactivo."""
     print(f"\n{BOLD}--- Calculadora Básica ---{RESET}")
